@@ -1,0 +1,70 @@
+<meta charset="UTF-8">
+
+
+<script>
+
+    function mostra(texto) {
+
+        document.write(texto);
+        document.write("<br>");
+    }
+
+    function perguntaOperacao() {
+
+        var contador = 0;
+        while (contador < 1) {
+        
+            var operacao = prompt("informe o símbolo da operacao: +  -  *  /");
+            if (operacao == "+" || operacao == "-" || operacao == "*" ||operacao == "/") {            
+                contador++;
+            }
+        }
+        return operacao;
+    }
+
+    function perguntaValores() {
+
+        var contador = 0;
+        while (contador < 1) {
+
+            var numero1 = parseInt(prompt("informe o 1º número:"));
+            var numero2 = parseInt(prompt("informe o 2º número:"));
+            if (isNaN(numero1) == false && isNaN(numero2) == false) {
+                contador++
+            }    
+        }
+        return [numero1, numero2];
+    }
+
+    function realizaContas(operacao, valores) {
+
+        if (operacao == "+") {
+
+            conta = valores[0] + valores[1];
+        }
+        if (operacao == "-") {
+
+            conta = valores[0] - valores[1];
+        }
+        if (operacao == "*") {
+
+            conta = valores[0] * valores[1];
+        } 
+        if (operacao == "/"){
+
+            conta = valores[0] / valores[1];
+        }
+        return conta;   
+    }
+    
+    var operacao = " ";    
+    var valores = [];    
+    var conta = 0;
+
+    operacao = perguntaOperacao();
+    valores = perguntaValores();
+    conta = realizaContas(operacao, valores);    
+
+    mostra("<h2>O resultado da operação é " + conta + "</h2");
+
+</script>

@@ -1,0 +1,49 @@
+<meta charset="utf-8">
+
+<script>
+	
+	function pulaLinha(){
+
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function mostra(txt){
+
+		document.write(txt);
+		pulaLinha();
+	}
+
+	function pontuacao(vit, emp){
+
+		return vit * 3 + emp;
+	}
+
+	vitorias = parseInt(prompt("Entre com o número de vitórias."));
+	empates = parseInt(prompt("Entre com o número de empates."));
+
+	//var vitorias = prompt("Entre com o número de vitórias.");
+	//var empates = prompt("Entre com o número de empates.");
+
+	pontos = pontuacao(vitorias, empates);
+	mostra("A pontuação do seu time é: " + pontos);
+
+	if(pontos > 28){
+		mostra("Seu time fez mais pontos que ano passado :D");
+	}
+
+	if(pontos < 28 && pontos != 0){
+		mostra("Seu time fez menos pontos que ano passado :C");
+	}
+	
+	if(pontos == 28){
+		mostra("Seu time fez mais pontos que ano passado :|");
+	}
+	if(pontos == 0) {
+		mostra("Eu sinto muito pelo seu time")
+	}
+
+//	if(pontos == 0)
+//		mostra("Eu sinto muito pelo seu time ;C");
+
+</script>

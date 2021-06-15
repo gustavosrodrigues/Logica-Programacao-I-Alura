@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var numeroFamilia;
+    var contador = 0;
+    var idade;
+    var media;
+    var idadeSoma = 0;
+
+    numeroFamilia = parseInt(prompt("Tua família é composta de quantas pessoas?"));
+
+    while (contador < numeroFamilia) {
+
+        idade = parseInt(prompt("Digite a idade de seu familiar:"));
+        idadeSoma = idadeSoma + idade;
+        contador++;
+    }
+
+    media = idadeSoma / numeroFamilia;
+
+    mostra(media);
+
+
+</script>
